@@ -35,5 +35,3 @@
 补充空投文案模板
 修正 README 说明
 ```
-
-<!-- display refresh -->
