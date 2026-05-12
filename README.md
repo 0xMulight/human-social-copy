@@ -30,5 +30,3 @@ human-social-copy/
 ## License
 
 MIT
-
-<!-- display refresh -->
