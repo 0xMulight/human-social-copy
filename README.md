@@ -4,7 +4,7 @@
 
 它适合把草稿、笔记、截图内容、项目资料、AI工具体验、crypto内容、空投内容、教程或粗略想法，改成更像真人写的中文社媒内容。
 
-重点很简单：第一行抓住注意力，中间给有用信息，结尾引导一个动作。语言要朴素、克制、可信。
+重点很简单：第一行抓住注意力，中间给有用信息，结尾引导一个动作。语言要朴素、克制、可信。改写时也会优先保留原稿里已经成立的强钩子，不会为了去AI腔把好标题洗平。
 
 ## 这个仓库能做什么
 
@@ -12,6 +12,8 @@
 
 - 按钩子加干货加CTA输出
 - 第一行先抓住读者注意力，但不夸张
+- 保留原稿里有结果感、场景感、读者收益的强钩子
+- 第一行优先写读者能得到什么变化，而不是泛泛提醒
 - 中间给真实经验、步骤、清单、判断标准、限制或注意事项
 - 结尾只引导一个动作，比如评论、收藏、关注、分享、尝试、提问
 - 去掉明显AI腔、空话、套话和过度修饰
@@ -85,7 +87,7 @@ https://github.com/0xMulight/human-social-copy
 调用时可以这样说：
 
 ```text
-按human-social-copy规则，把下面草稿改成中文社媒文案。要求钩子加干货加CTA，贴近当下热度，加入AI相关角度，去掉AI腔和英文前后空格。
+按human-social-copy规则，把下面草稿改成中文社媒文案。要求钩子加干货加CTA，保留原稿里已经成立的强钩子，贴近当下热度，加入AI相关角度，去掉AI腔和英文前后空格。
 ```
 
 ### 仓库读取方式
@@ -103,7 +105,7 @@ https://github.com/0xMulight/human-social-copy
 把`human-social-copy`文件夹放到Codexskills目录后，可以这样调用：
 
 ```text
-使用$human-social-copy，把这段草稿改成钩子加干货加CTA的中文社媒文案。
+使用$human-social-copy，把这段草稿改成保留强钩子、钩子加干货加CTA的中文社媒文案。
 ```
 
 ## 仓库结构
@@ -132,7 +134,7 @@ human-social-copy/
 
 `human-social-copy/agents/openai.yaml`是技能展示信息，包含名称、简介和默认调用提示。
 
-`human-social-copy/references/patterns.md`是参考模板，放了常用开头、基础公式、cryptoYap文案结构、AI内容文案结构和改写检查清单。
+`human-social-copy/references/patterns.md`是参考模板，放了常用开头、第一行选择、基础公式、cryptoYap文案结构、AI内容文案结构和改写检查清单。
 
 `CONTRIBUTING.md`是贡献说明，方便别人知道怎么改这个规则包。
 
