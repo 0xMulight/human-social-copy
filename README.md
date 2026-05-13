@@ -60,6 +60,24 @@
 
 不同Agent没有统一安装格式，所以这个仓库同时提供了通用提示词和常见Agent入口文件。
 
+### 直接给AI仓库链接
+
+如果你的AI可以访问GitHub，可以直接把仓库链接发给它：
+
+```text
+请读取这个仓库里的规则，并按它来改写我的中文社媒文案：
+https://github.com/0xMulight/human-social-copy
+```
+
+更稳一点可以这样说：
+
+```text
+请优先读取这个仓库的AGENTS.md和prompts/universal-agent-prompt.md，然后按human-social-copy规则帮我写中文社媒文案。
+https://github.com/0xMulight/human-social-copy
+```
+
+如果AI打不开GitHub链接，就复制`prompts/universal-agent-prompt.md`里的内容给它。
+
 ### 通用方式
 
 打开`prompts/universal-agent-prompt.md`，把全文复制到你的Agent系统提示词、自定义指令、Project知识、Gem或Agent说明里。
