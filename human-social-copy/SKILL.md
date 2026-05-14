@@ -16,7 +16,8 @@ Good social copy should be attractive and credible at the same time. The attract
 4. Use the catchy-but-credible version unless the user asks for a conservative tone.
 5. Build the post with short paragraphs, numbered points when useful, and concrete nouns.
 6. Remove extra spaces between Chinese and English/numbers.
-7. Check against the banned-template list before final output.
+7. Expand overcompressed key verbs in technical/process contexts.
+8. Check against the banned-template list before final output.
 
 ## Hook Rules
 
@@ -26,7 +27,7 @@ Prefer hooks like:
 
 - `{project/tool}里真正值钱的，是{specific signal/result}`.
 - `关注{field/project}的人，{entry/tool}值得先盯。`
-- `{scenario}卡住时，先看{method/entry}，能少踩{specific pitfall}。`
+- `{scenario}卡住时，先查看{method/entry}，能少踩{specific pitfall}。`
 - `{tool/project}的早期问题，往往会先在{community/issue/meeting}里露出来。`
 
 Avoid opening with:
@@ -52,11 +53,27 @@ For Chinese social copy, do not add spaces between Chinese characters and Englis
 
 Do not rewrite code, URLs, file paths, commands, repo names, or Markdown link targets for spacing.
 
+## Verb Completeness
+
+In Chinese social copy about tools, code, projects, or workflows, avoid compressing key actions into one-character shorthand when it makes the action vague or too casual.
+
+Prefer:
+
+- `运行模型` over `跑模型`.
+- `选择插件` over `选插件`.
+- `查看反馈` or `观察反馈` over `看反馈`.
+- `配置参数` over `弄配置`.
+- `部署服务` over `搞部署`.
+- `接入GitHub` over `接GitHub`.
+- `验证效果` over `测一下` when the tone should be professional.
+
+Do not make every sentence formal. Short verbs can stay when they carry natural rhythm, such as `先看`、`值得盯`、`卡住`. Expand verbs when they describe technical actions, process steps, or decisions: 运行、选择、查看、配置、部署、验证、接入、生成、整理、判断.
+
 ## Strength Control
 
 If the copy feels too flat, strengthen it by adding one of these:
 
-- A sharper audience: `正在装Agent Wallet的开发者` beats `对Arc感兴趣的人`.
+- A sharper audience: `正在安装Agent Wallet的开发者` beats `对Arc感兴趣的人`.
 - A clearer result: `更早看到bug和修复节奏` beats `了解社区动态`.
 - A real conflict: `只看公告会漏掉社区里的早期反馈` beats `社区信息很多`.
 - A concrete scene: `Office Hour/Windows npm module bug/community.arc.network` beats `生态活动`.
@@ -81,6 +98,7 @@ Before replying, verify:
 - The wording does not trigger banned templates.
 - Strong claims are tied to concrete facts.
 - Chinese-English boundary spaces are removed.
-- The result could plausibly be posted without sounding like AI.
+- Key technical/process verbs are complete.
+- The result could plausibly be posted without sounding likeAI.
 
 When the user asks to optimize repository rules, update `AGENTS.md`, `prompts/universal-agent-prompt.md`, and relevant files in `human-social-copy/references/` so the behavior is consistent across entry points.
