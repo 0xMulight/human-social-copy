@@ -1,179 +1,71 @@
----
-name: human-social-copy
-description: 用简体中文撰写、改写、润色社媒内容，让文案更像真人写的经验分享，适合X、Threads、Instagram、TikTok、cryptoYap、空投解析、项目解读、工具教程、AI工具体验、AI模型更新解读、AI工作流分享和个人复盘。用户需要钩子加干货加CTA、根据文章内容自适应开头钩子、保留强钩子、去AI味、去夸张表达、少标题、不要线程、清理括号、清理空话、去除英文单词前后空格时使用。
----
+# Human Social Copy
 
-# 真人感社媒文案
+Use this skill when the user wants Chinese social media copy, thread writing, tweet/post optimization, Xiaohongshu-style hooks, or rewrites that should sound human, specific, and engaging.
 
-用这个技能把笔记、草稿、截图内容或粗略想法改成更真实、更朴素、更有用的中文社媒文案。
+## Core Principle
 
-## 核心结构
+The first line decides whether people keep reading. It must show who this is for, what problem it helps with, and why the reader should care now.
 
-文案按这个顺序写：
+Good social copy is not just restrained. It should be attractive, but the attraction must come from specific facts: a concrete person, scene, result, risk, bug, tool, community, or decision point.
 
-1. 钩子：第一行抓住注意力，但不要夸张。
-2. 干货：中间给具体经验、步骤、例子、判断标准或注意事项。
-3. CTA：结尾只引导一个动作。
+## Default Workflow
 
-最终文案里不要直接写“钩子、干货、CTA”这些标签，让结构自然出现。
+1. Extract the factual payload: project, tool, audience, scene, problem, result, evidence.
+2. Choose the strongest hook angle from `references/adaptive-hooks.md`.
+3. Draft three opening options: steady, catchy, strong.
+4. Use the catchy-but-credible version unless the user asks for a conservative tone.
+5. Build the post with short paragraphs, numbered points when useful, and concrete nouns.
+6. Check against the banned-template list before final output.
 
-## 强钩子保真
+## Hook Rules
 
-改写前先看原稿里有没有已经成立的强钩子。不要为了变得朴素，把最有吸引力的第一行削弱掉。
+A hook may use conflict, result, contrast, risk, or curiosity, but it cannot rely on vague hype.
 
-强钩子通常包含：
+Prefer hooks like:
 
-- 结果变化，比如从能写代码到能参与开发流程。
-- 明确收益，比如少踩旧API、少翻PR、少复制日志。
-- 具体场景，比如前端验证、CI排障、大仓库理解、资料抓取。
-- 可信事实，比如官方项目、GitHub链接、star数量、工具名称。
-- 收藏理由，比如清单、步骤、判断标准、配置组合。
+- `{project/tool} 里真正值钱的，是 {specific signal/result}`.
+- `关注 {field/project} 的人，{entry/tool} 值得先盯。`
+- `{scenario} 卡住时，先看 {method/entry}，能少踩 {specific pitfall}。`
+- `{tool/project} 的早期问题，往往会先在 {community/issue/meeting} 里露出来。`
 
-如果原稿第一行已经有结果感、场景感或读者收益，优先保留它。可以调低夸张语气，但不要改成泛泛提醒。
+Avoid opening with:
 
-第一行优先写读者能得到什么变化，其次才写背景或提醒。
+- 很多人 / 大家都 / 大多数人
+- 别只当成 / 别只把 / 别再以为
+- 不是……而是……
+- 不是普通 X，更像 Y
+- X 不在……而在……
+- 简单讲 / 简单理解 / 简单说
+- 千万不要 / 99% 的人 / 全网最（unless the source proves it）
 
-例如：
+## Strength Control
 
-```text
-Codex想从“能写代码”升级到“能参与开发工作流”，这几个GitHub高星项目可以先收藏。
-```
+If the copy feels too flat, strengthen it by adding one of these:
 
-可以改成更稳但仍有结果感的版本：
+- A sharper audience: `正在装 Agent Wallet 的开发者` beats `对 Arc 感兴趣的人`.
+- A clearer result: `更早看到 bug 和修复节奏` beats `了解社区动态`.
+- A real conflict: `只看公告会漏掉社区里的早期反馈` beats `社区信息很多`.
+- A concrete scene: `Office Hour / Windows npm module bug / community.arc.network` beats `生态活动`.
 
-```text
-Codex想从写代码升级到参与开发流程，先补这几类工具。
-```
+Do not strengthen by adding empty adjectives. Strengthen by making the reader see the practical stake.
 
-## 开头禁区
+## Rewrite Boundaries
 
-这些开头容易显得像模板，默认避开：
+When using reference posts:
 
-- `很多人...`、`大家都...`、`大多数人...` 这种泛泛归因。
-- `别只当成...`、`别只把...`、`别再以为...` 这种先虚设误区的开头。
-- `不是...而是...`、`不是普通X，更像Y`、`X不在...而在...` 这种排比式反差。
-- `简单讲...`、`简单理解...`、`简单说...` 这种解释性垫话。
-- `千万不要...`、`99%的人...` 这种没有证据支撑的夸张句。
+- Borrow structure, not sentences.
+- Borrow hook type, not phrasing.
+- Borrow rhythm, not the author’s口头禅.
+- Avoid copying the same opening, transition, or conclusion pattern.
 
-需要写反差时，直接写变化本身、判断标准或具体场景，不要先摆一个模糊的否定对象。需要解释概念时，直接写用途、对象和场景。
+## Output Standards
 
-弱：很多人把Arc House当成普通社区，其实不是。
+Before replying, verify:
 
-强：Arc House把builders、Office Hour和生态资源聚在一个入口里，适合想长期参与Arc的人先看。
+- The first line is not a generic intro.
+- The hook is attractive enough for social media.
+- The wording does not trigger banned templates.
+- Strong claims are tied to concrete facts.
+- The result could plausibly be posted without sounding like AI.
 
-弱：别只把agentic wallet当成钱包。
-
-强：agentic wallet解决的是AI Agent如何在规则约束下持有和使用USDC。
-
-弱：简单讲，Arc House就是Arc的Discord。
-
-强：Arc House更像Arc给builders准备的社区入口，里面承接Office Hour、项目交流和生态资源。
-
-## 自适应开头钩子
-
-写第一行时，先判断文章内容，不要随机套模板。
-
-先看6件事：
-
-1. 文章类型：教程、清单、避坑、案例、复盘、观点、工具推荐、项目分析。
-2. 目标读者：新手、创作者、开发者、运营、投资者、项目方、某个具体人群。
-3. 核心收益：省时间、省钱、少踩坑、提高效果、学会方法、看懂趋势。
-4. 核心问题：读者现在卡在哪里、担心什么、误解什么。
-5. 可信证据：真实经历、数据、步骤、工具名、项目名、截图、链接、对比结果。
-6. 情绪强度：提醒、好奇、担心、惊喜、反差、收藏价值。
-
-再选择开头模型：
-
-- 教程内容：痛点模型、数字清单模型、新手友好模型。
-- 工具清单：高价值模型、数字清单模型、结果变化模型。
-- 避坑内容：痛点模型、风险提醒模型、误区纠偏模型。
-- 案例复盘：反差模型、亲测体验模型、结果变化模型。
-- 观点分析：好奇模型、反差模型、误区纠偏模型。
-- AI工具体验：痛点模型、亲测体验模型、借势模型。
-- AI工作流：结果变化模型、痛点模型、数字清单模型。
-- crypto或空投：风险提醒模型、成本模型、时机模型。
-- 资源合集：高价值模型、数字清单模型、圈定受众模型。
-
-第一行前10到15个字尽量放最强信息，比如读者身份、核心问题、结果变化或数字承诺。
-
-可以组合两个模型，比如痛点加方案、结果加数字、圈定受众加提醒。不要把所有模型堆在一句话里。
-
-用户要求开头、标题、钩子、多版本第一行，或需要更完整模板时，读取`references/adaptive-hooks.md`。
-
-## 写作要求
-
-保持朴素、具体、可信。
-
-- 使用简体中文。
-- 用户没有要求时，不要写成线程。
-- 最终文案里不要保留括号和括号里的补充说明。
-- 中文和英文单词或缩写之间不要留空格，例如“AI腔”“加CTA”“crypto内容”。
-- 不要堆很多分类小标题。大多数内容用短段落或少量编号就够。
-- 不要总用“大家以为”“很多人”开头。
-- 少用“当”字开头的句子，能换成更自然的说法就换掉。
-- 避免“不是……而是……”这类排比感很重的句式，除非用户明确要这种风格。
-- 少用“简单讲”“简单理解”“简单说”这类解释性垫话，直接进入用途、判断或场景。
-- 去掉夸张修饰、宏大比喻和绝对化表达。
-- 多写具体经验、真实取舍、检查方法，少写口号。
-- 写crypto或空投内容时，不要编造数据、日期、奖励、合作、融资、规则。需要最新事实时，先核实；核实不了就提醒用户哪些信息需要确认。
-- 写AI内容时，不要编造模型能力、发布时间、价格、上下文长度、产品功能或官方承诺。需要最新事实时，先核实；核实不了就提醒用户哪些信息需要确认。
-
-## 选题要求
-
-写X、Threads、Instagram、TikTok、cryptoYap、空投内容或AI内容时，选题先看这两点：
-
-- 内容要对读者有用。教程、工具、清单、避坑、案例、数据整理，通常比泛泛而谈更容易被人看完。
-- 选题要贴近当下热度。可以结合市场正在讨论的话题、项目更新、空投规则变化、任务变化、代币消息、AI模型更新、AI工具发布、AI新玩法，或者社区里反复出现的问题。
-- 不要为了吸引注意力写空泛的戏剧化表达。有用内容也要保持冷静、可信。
-
-## 禁用词
-
-最终文案里删除这些词，除非用户要求保留原文引用：
-
-旨在、赋能、打造、范式、这种、硬生生、扒、助力、路径、逻辑、痛点、说白了、护城河、简单讲、简单理解、简单说
-
-遇到类似的空泛商务词，也要换成更直接的说法。
-
-## 输出流程
-
-写新内容时：
-
-1. 先判断读者是谁、平台是什么、结尾希望读者做什么。
-2. 只选一个清楚的角度，不要什么都写。
-3. 先按文章类型选择开头模型。
-4. 第一行优先写结果变化、读者收益或具体场景，不要制造虚假紧迫感。
-5. 中间给3到7个短段落或要点。
-6. 结尾只放一个CTA，比如评论、收藏、关注、分享、尝试、提问。
-7. 输出前按检查表过一遍。
-
-改写内容时：
-
-1. 保留用户原意和用户给出的事实。
-2. 先找原稿里最强的钩子，不要把有结果感的第一行改平。
-3. 如果原稿没有强钩子，就根据文章内容自适应选择开头模型。
-4. 删除泛泛而谈的判断和填充句。
-5. 保留有用细节。需要补充时，只补充能从原文合理推出的信息。
-6. 让最终文案像真人在分享经验、踩坑、判断方法或观察结果。
-7. 如果原文信息太少，先给出文案，再用一句话说明还缺哪些事实。
-
-## 检查表
-
-输出前确认：
-
-- 第一行单独看也能抓住重点。
-- 第一行保留了原稿最强的结果感、场景感或读者收益。
-- 第一行和正文内容一致，没有夸大文章承诺。
-- 第一行避开了“很多人...”“别只当成...”“不是...而是...”“简单讲...”这类模板句式。
-- 第一行尽量把最强信息放在前10到15个字。
-- 中间真的有信息，不是口号。
-- 结尾只引导一个动作。
-- 没有括号。
-- 没有禁用词。
-- 没有明显AI腔。
-- 英文单词或缩写前后没有多余空格。
-- 语气真实、克制、可信。
-- 结论没有超过证据本身。
-
-## 参考模板
-
-用户需要示例、模板、多版本文案或完整写作系统时，再读取`references/patterns.md`。
+When the user asks to optimize repository rules, update `AGENTS.md`, `prompts/universal-agent-prompt.md`, and relevant files in `human-social-copy/references/` so the behavior is consistent across entry points.
