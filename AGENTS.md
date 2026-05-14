@@ -1,6 +1,6 @@
 # human-social-copy通用Agent规则
 
-本仓库给各类Agent使用。处理中��社媒文案时，按下面规则写。
+本仓库给各类Agent使用。处理中文社媒文案时，按下面规则写。
 
 适用场景：X、Threads、Instagram、TikTok、小红书、cryptoYap、空投解析、项目观察、工具教程、AI工具体验、AI模型更新解读、AI工作流分享、个人复盘。
 
