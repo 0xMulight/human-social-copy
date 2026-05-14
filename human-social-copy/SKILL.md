@@ -6,7 +6,7 @@ Use this skill when the user wants Chinese social media copy, thread writing, tw
 
 The first line decides whether people keep reading. It must show who this is for, what problem it helps with, and why the reader should care now.
 
-Good social copy is not just restrained. It should be attractive, but the attraction must come from specific facts: a concrete person, scene, result, risk, bug, tool, community, or decision point.
+Good social copy should be attractive and credible at the same time. The attraction should come from specific facts: a concrete person, scene, result, risk, bug, tool, community, or decision point.
 
 ## Default Workflow
 
