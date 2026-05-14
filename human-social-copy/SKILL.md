@@ -99,6 +99,6 @@ Before replying, verify:
 - Strong claims are tied to concrete facts.
 - Chinese-English boundary spaces are removed.
 - Key technical/process verbs are complete.
-- The result could plausibly be posted without sounding likeAI.
+- The result could plausibly be posted without sounding like AI.
 
 When the user asks to optimize repository rules, update `AGENTS.md`, `prompts/universal-agent-prompt.md`, and relevant files in `human-social-copy/references/` so the behavior is consistent across entry points.
