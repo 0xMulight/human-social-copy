@@ -1,104 +1,156 @@
 # Human Social Copy
 
-Use this skill when the user wants Chinese social media copy, thread writing, tweet/post optimization, Xiaohongshu-style hooks, or rewrites that should sound human, specific, and engaging.
+Use this skill when the user wants Chinese social media copy that feels human, practical, and ready to post. It works for X, Threads, Instagram, TikTok, crypto yap, airdrop analysis, AI tools, GitHub projects, product notes, and personal experience posts.
 
-## Core Principle
+Default language: Simplified Chinese.
 
-The first line decides whether people keep reading. It must show who this is for, what problem it helps with, and why the reader should care now.
+## Goal
 
-Good social copy should be attractive and credible at the same time. The attraction should come from specific facts: a concrete person, scene, result, risk, bug, tool, community, or decision point.
+Turn rough notes into a post with:
 
-## Default Workflow
+1. Hook
+2. Useful value
+3. Soft CTA
 
-1. Extract the factual payload: project, tool, audience, scene, problem, result, evidence.
-2. Choose the strongest hook angle from `references/adaptive-hooks.md`.
-3. Draft three opening options: steady, catchy, strong.
-4. Use the catchy-but-credible version unless the user asks for a conservative tone.
-5. Build the post with short paragraphs, numbered points when useful, and concrete nouns.
-6. Remove extra spaces between Chinese and English/numbers.
-7. Expand overcompressed key verbs in technical/process contexts.
-8. Check against the banned-template list before final output.
+Do not create a thread unless the user asks for one.
 
-## Hook Rules
+## Core Rules
 
-A hook may use conflict, result, contrast, risk, or curiosity, but it cannot rely on vague hype.
+- Write in Simplified Chinese.
+- Remove spaces around English words in Chinese text, for example `AI工具`, `GitHub项目`, `CTA结尾`.
+- Remove all parentheses from the final copy.
+- Keep the language plain and credible.
+- Avoid decorative wording, inflated claims, and announcement-style writing.
+- Do not overuse subheadings.
+- Do not write like a tutorial outline unless the user asks for one.
+- Preserve a strong original hook if it is already natural.
 
-Prefer hooks like:
+## Direct Sentence Rule
 
-- `{project/tool}里真正值钱的，是{specific signal/result}`.
-- `关注{field/project}的人，{entry/tool}值得先盯。`
-- `{scenario}卡住时，先查看{method/entry}，能少踩{specific pitfall}。`
-- `{tool/project}的早期问题，往往会先在{community/issue/meeting}里露出来。`
+Prefer direct sentences that explain what the subject can do.
 
-Avoid opening with:
+Good:
 
-- 很多人/大家都/大多数人
-- 别只当成/别只把/别再以为
-- 先否定一个判断，再转折强调另一个判断
-- 用“普通X”和“更像Y”做套路化对比
-- 用前后位置对照来制造模板感
-- 简单讲/简单理解/简单说
-- 千万不要/99%的人/全网最，unless the source proves it
+- `agentmemory可以给AI coding agent加一层持久记忆。`
+- `这个工具可以先帮你删掉AI中文文案里的套话。`
+- `关注AI coding agent记忆能力的人，可以先看它怎么保存上下文、复用历史决策、减少重复解释。`
 
-## Chinese-English Spacing
+Avoid sentences that first judge the thing, then explain it with a colon.
 
-For Chinese social copy, do not add spaces between Chinese characters and English words/numbers. Keep spaces only inside English phrases or official names.
+Avoid broad endings about a direction, project, or entry point. Replace them with specific signals, actions, or outcomes.
 
-- Correct: `它让AI Agent在安全策略限制下持有USDC。`
-- Wrong: `它让 AI Agent 在安全策略限制下持有 USDC。`
-- Correct: `Agent Wallet的重点，是让AI Agent完成USDC支付。`
-- Wrong: `Agent Wallet 的重点，是让 AI Agent 完成 USDC 支付。`
-- Correct: `关注Arc的builder，可以先把Arc House加入信息源。`
-- Wrong: `关注 Arc 的 builder，可以先把 Arc House 加入信息源。`
+## Banned Words
 
-Do not rewrite code, URLs, file paths, commands, repo names, or Markdown link targets for spacing.
+Do not use these words in final Chinese copy:
 
-## Verb Completeness
+- 旨在
+- 赋能
+- 打造
+- 范式
+- 这种
+- 硬生生
+- 扒
+- 助力
+- 路径
+- 逻辑
+- 痛点
+- 说白了
+- 护城河
 
-In Chinese social copy about tools, code, projects, or workflows, avoid compressing key actions into one-character shorthand when it makes the action vague or too casual.
+## Banned Patterns
 
-Prefer:
+Avoid:
 
-- `运行模型` over `跑模型`.
-- `选择插件` over `选插件`.
-- `查看反馈` or `观察反馈` over `看反馈`.
-- `配置参数` over `弄配置`.
-- `部署服务` over `搞部署`.
-- `接入GitHub` over `接GitHub`.
-- `验证效果` over `测一下` when the tone should be professional.
+- The `不是...而是...` contrast pattern.
+- Repeated sentences starting with `当`.
+- Repeated openings with `大家以为`.
+- Hype-only claims.
+- Empty advice without a concrete next step.
+- Colon explanations after a vague judgement.
+- Generic endings using `这个方向` or `这个入口`.
 
-Do not make every sentence formal. Short verbs can stay when they carry natural rhythm, such as `先看`、`值得盯`、`卡住`. Expand verbs when they describe technical actions, process steps, or decisions: 运行、选择、查看、配置、部署、验证、接入、生成、整理、判断.
+## Topic Selection
 
-## Strength Control
+Prefer topics close to current attention:
 
-If the copy feels too flat, strengthen it by adding one of these:
+- AI models
+- AI Agent
+- AI coding
+- AI workflow
+- AI automation
+- AI design tools
+- crypto projects
+- airdrops and points
+- on-chain tools
+- GitHub open-source projects
+- wallets, DeFi, L2, Restaking, SocialFi
 
-- A sharper audience: `正在安装Agent Wallet的开发者` beats `对Arc感兴趣的人`.
-- A clearer result: `更早看到bug和修复节奏` beats `了解社区动态`.
-- A real conflict: `只看公告会漏掉社区里的早期反馈` beats `社区信息很多`.
-- A concrete scene: `Office Hour/Windows npm module bug/community.arc.network` beats `生态活动`.
+A topic should answer at least one of these:
 
-Do not strengthen by adding empty adjectives. Strengthen by making the reader see the practical stake.
+- Who should care?
+- What can it do?
+- What changed?
+- What can the reader try next?
+- What risk should the reader avoid?
 
-## Rewrite Boundaries
+## Hook Guidance
 
-When using reference posts:
+Choose the hook based on the strongest information in the source. Do not force every post into the same opening.
 
-- Borrow structure, not sentences.
-- Borrow hook type, not phrasing.
-- Borrow rhythm, not the author’s口头禅.
-- Avoid copying the same opening, transition, or conclusion pattern.
+Useful hook types:
 
-## Output Standards
+- Specific benefit: `这个工具可以把AI写作里的废话先砍掉一半。`
+- Personal experience: `我试了几轮，发现空投内容最容易死在第一行。`
+- Timely angle: `AI Agent开始接管更多链上操作后，钱包会变得更重要。`
+- Audience angle: `如果你经常用AI写中文推文，先把这几类句子删掉。`
+- Risk reminder: `很多项目不是没内容，是写出来太像公告。`
 
-Before replying, verify:
+## Value Guidance
 
-- The first line is not a generic intro.
-- The hook is attractive enough for social media.
-- The wording does not trigger banned templates.
-- Strong claims are tied to concrete facts.
-- Chinese-English boundary spaces are removed.
-- Key technical/process verbs are complete.
-- The result could plausibly be posted without sounding like AI.
+The middle part should be specific. Add practical information such as:
 
-When the user asks to optimize repository rules, update `AGENTS.md`, `prompts/universal-agent-prompt.md`, and relevant files in `human-social-copy/references/` so the behavior is consistent across entry points.
+- Who it helps
+- What it does
+- How to use it
+- What to check
+- What to avoid
+- Real examples
+- Personal observations
+- Reusable methods
+
+## CTA Guidance
+
+Use a light CTA. Do not sound like sales copy.
+
+Examples:
+
+- `先收藏，写推文前对照删一遍。`
+- `你也可以拿自己的内容试一下，看第一行有没有留住人。`
+- `如果你在做AI或crypto内容，这套规则可以直接丢给Agent用。`
+- `有更像真人的写法，也可以直接提PR补进去。`
+
+## Process
+
+1. Identify the strongest shareable point in the source.
+2. Keep factual information. Do not invent details.
+3. Write a first line that can hold attention.
+4. Rewrite the body into practical, concrete information.
+5. Remove banned words and banned patterns.
+6. Remove parentheses.
+7. Remove spaces around English words in Chinese text.
+8. End with a soft CTA.
+
+## Final Check
+
+Before answering, check:
+
+- Hook is strong and natural.
+- The post has useful information.
+- CTA is light.
+- No parentheses.
+- No banned words.
+- No spaces around English words in Chinese text.
+- No `不是...而是...` structure.
+- No vague judgement followed by a colon explanation.
+- No generic direction or entry-point ending.
+- The copy sounds like a real person sharing useful experience.
