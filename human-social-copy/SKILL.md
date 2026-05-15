@@ -27,13 +27,15 @@ Do not create a thread unless the user asks for one.
 
 ## Direct Sentence Rule
 
-Prefer direct sentences that explain what the subject can do.
+Prefer direct sentences that explain the result.
+
+When writing about a tool or project, answer what it can do, when it works, and which scenario it fits.
 
 Good:
 
-- `agentmemory可以给AI coding agent加一层持久记忆。`
-- `这个工具可以先帮你删掉AI中文文案里的套话。`
-- `关注AI coding agent记忆能力的人，可以先看它怎么保存上下文、复用历史决策、减少重复解释。`
+- `agentmemory可以记录会话、工具调用和项目决策。`
+- `agentmemory会在下一次任务开始时，把相关上下文重新注入给Agent。`
+- `agentmemory适合项目周期长、上下文容易断的AI编程场景。`
 
 Avoid sentences that first judge the thing, then explain it with a colon.
 
@@ -103,7 +105,7 @@ Useful hook types:
 - Personal experience: `我试了几轮，发现空投内容最容易死在第一行。`
 - Timely angle: `AI Agent开始接管更多链上操作后，钱包会变得更重要。`
 - Audience angle: `如果你经常用AI写中文推文，先把这几类句子删掉。`
-- Risk reminder: `很多项目不是没内容，是写出来太像公告。`
+- Risk reminder: `很多项目内容不差，问题出在写法太像公告。`
 
 ## Value Guidance
 
