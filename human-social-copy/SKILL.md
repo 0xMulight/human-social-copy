@@ -34,11 +34,11 @@ Avoid opening with:
 
 - 很多人/大家都/大多数人
 - 别只当成/别只把/别再以为
-- 不是……而是……
-- 不是普通X，更像Y
-- X不在……而在……
+- 先否定一个判断，再转折强调另一个判断
+- 用“普通X”和“更像Y”做套路化对比
+- 用前后位置对照来制造模板感
 - 简单讲/简单理解/简单说
-- 千万不要/99%的人/全网最（unless the source proves it）
+- 千万不要/99%的人/全网最，unless the source proves it
 
 ## Chinese-English Spacing
 
