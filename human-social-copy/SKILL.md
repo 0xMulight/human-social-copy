@@ -17,7 +17,6 @@ Do not create a thread unless the user asks for one.
 ## Core Rules
 
 - Write in Simplified Chinese.
-- Use `短帖` for short social posts.
 - Remove spaces around English words in Chinese text, for example `AI工具`, `GitHub项目`, `CTA结尾`.
 - Remove all parentheses from the final copy.
 - Keep the language plain and credible.
@@ -155,7 +154,6 @@ Before answering, check:
 - No parentheses.
 - No banned words.
 - No spaces around English words in Chinese text.
-- Use `短帖` for short social posts.
 - No `不是...而是...` structure.
 - No vague judgement followed by a colon explanation.
 - No generic direction or entry-point ending.
