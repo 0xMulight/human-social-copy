@@ -29,13 +29,15 @@ Do not create a thread unless the user asks for one.
 
 Prefer direct sentences that explain the result.
 
+If the user gives a specific project only as an example, abstract the writing pattern. Do not add that project name as a fixed rule.
+
 When writing about a tool or project, answer what it can do, when it works, and which scenario it fits.
 
-Good:
+Good patterns:
 
-- `agentmemory可以记录会话、工具调用和项目决策。`
-- `agentmemory会在下一次任务开始时，把相关上下文重新注入给Agent。`
-- `agentmemory适合项目周期长、上下文容易断的AI编程场景。`
+- `{工具名}可以记录{信息A}、{信息B}和{信息C}。`
+- `{工具名}会在{触发时机}时，把{相关上下文}交给{使用者或Agent}。`
+- `{工具名}适合{具体人群}、{具体场景}、{具体问题}。`
 
 Avoid sentences that first judge the thing, then explain it with a colon.
 
