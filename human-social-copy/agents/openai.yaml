@@ -1,7 +1,7 @@
 interface:
   display_name: "真人感社媒文案"
-  short_description: "把中文社媒内容改得更真实、克制、有信息密度，并根据文章内容自适应选择开头钩子。"
-  default_prompt: "使用$human-social-copy，把这段草稿改成保留强钩子、能根据文章内容自适应选择开头、钩子加干货加CTA的中文社媒文案。"
+  short_description: "把中文社媒内容改得更真实、克制、有信息密度，保留强钩子，并减少解释腔和模板句。"
+  default_prompt: "使用$human-social-copy，把这段草稿改成中文社媒文案。保留原稿里已经成立的强钩子；如果原稿没有好开头，就根据内容自适应选择开头；使用Hook+干货+CTA结构；去掉括号、AI腔和英文前后空格；避免先评价再用冒号解释；能直接说结果就直接说。"
 
 policy:
   allow_implicit_invocation: true
