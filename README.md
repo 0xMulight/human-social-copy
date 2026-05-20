@@ -1,185 +1,114 @@
-# Human Social Copy
+# ✍️ Human Social Copy
 
-一个中文社交媒体文案规则库。
+<p align="center">
+  <img src="https://img.shields.io/badge/status-active-success" alt="Status">
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="License">
+  <img src="https://img.shields.io/badge/Hermes-skill-8A2BE2" alt="Hermes Skill">
+  <img src="https://img.shields.io/badge/language-简体中文-red" alt="Language">
+  <img src="https://img.shields.io/badge/Agents-All-brightgreen" alt="Agent Support">
+</p>
 
-你可以把它交给Codex、Claude、Gemini、Hermes或其他AI Agent，让它把内容改成更像真人写的中文社媒文案。
+<p align="center">
+  <b>让你的 AI 写出的中文社交文案不再像 AI —— 一套规则，所有 Agent 通用。</b>
+</p>
 
-适合这些内容：
+---
 
-- crypto项目解析
-- 空投和积分内容
-- AI工具分享
-- AI Agent和AI coding观察
-- GitHub开源项目介绍
-- 产品经验复盘
-- 中文推文和社媒内容改写
+## 这是什么
 
-默认结构是：Hook+干货+CTA。
+一套中文社交媒体文案规则库。你可以把它交给 Hermes、Claude Code、Codex、Gemini 或任何 AI Agent，让 AI 写出的内容更像真人分享。
 
-第一行先抓住人，中间给实在信息，结尾给一个轻动作。
+### 和普通写作规则的区别
 
-## 这个仓库能做什么
+| | 普通提示词 | Human Social Copy |
+|---|---|---|
+| 覆盖范围 | 单一 Agent | 所有主流 Agent 通用 |
+| 维护方式 | 贴在对话里 | Git 版本管理，PR 协作 |
+| 规则粒度 | 笼统要求 | 禁用词清单 + 句式替换 + 钩子模板 |
+| 学习成本 | 每次重新解释 | clone 即用，Agent 自动读取 |
 
-它可以帮你统一AI写作规则，让不同Agent写出来的内容更接近真人表达。
+## 效果对比
 
-主要解决这些问题：
+**改写前：**
 
-- 开头像公告，没人停留
-- 中间全是套话，没有真实信息
-- 结尾太像销售
-- 中文里夹英文时空格很乱
-- 喜欢用AI常见词
-- 喜欢用固定句式
-- 喜欢先评价一句，再用冒号解释
-- 喜欢用空泛建议收尾
+> 这个AI工具旨在赋能创作者打造更高效的视频工作流，它的核心逻辑是通过智能剪辑算法实现视频创作范式的升级，解决了内容生产中的诸多痛点。
 
-## 核心规则
+**改写后：**
 
-写作时要做到：
+> AI剪辑工具可以把口播视频里的沉默、口误、重复自动剪掉，导出带字幕的成片。自己剪一条 10 分钟视频大概 40 分钟，用它 5 分钟搞定。适合做口播、教程、复盘内容的人。免费版每天 3 条。
 
-- 使用简体中文
-- 使用Hook+干货+CTA结构
-- 不写线程，除非用户明确要求
-- 去除英文单词前后的空格，比如写成`AI工具`、`GitHub项目`、`CTA结尾`
-- 不使用括号
-- 不堆小标题
-- 不写成公告稿
-- 不写成营销稿
-- 不使用夸张修饰
-- 不写绝对化判断
-- 保留真实信息，不乱编
+## 解决什么问题
 
-## 直给句优先
+| 问题 | 规则里的解法 |
+|---|---|
+| 开头像公告，没人停留 | 自适应钩子模板，含热点/收益/经验/人群切入 |
+| 中间全是套话 | 直给句优先，先给结论 |
+| 结尾像销售 | 轻 CTA：收藏、试试、补充经验 |
+| 中英文空格混乱 | 强制"AI工具""GitHub项目"格式 |
+| 禁用 AI 八股词 | 13 个禁用词清单 |
+| 固定句式 | 禁止先评价再冒号解释等 6 种句式 |
+| 空泛建议收尾 | 要求给具体信号/动作/入口 |
 
-能直接说结果，就直接写。不要先评价项目，再用冒号补解释。
+## 快速开始
 
-如果用户只是拿某个项目举例，要抽象成通用规则，不要把例子里的项目名写进固定规则。
-
-推荐句式：
-
-- `{工具名}可以记录{信息A}、{信息B}和{信息C}。`
-- `{工具名}会在{触发时机}时，把{相关上下文}交给{使用者或Agent}。`
-- `{工具名}适合{具体人群}、{具体场景}、{具体问题}。`
-
-写工具或项目时，优先回答三件事：
-
-- 它能记录或提供什么
-- 它会在什么时机发挥作用
-- 它适合什么场景
-
-不要用泛泛建议收尾。写方向、入口、项目、工具时，要讲清楚它能提供什么信息，适合谁看，下一步看哪里。
-
-## 禁用词
-
-最终文案里不要使用这些词：
-
-- 旨在
-- 赋能
-- 打造
-- 范式
-- 这种
-- 硬生生
-- 扒
-- 助力
-- 路径
-- 逻辑
-- 痛点
-- 说白了
-- 护城河
-
-## 禁用句式
-
-避免这些写法：
-
-- 先否定再转折的排比
-- 总是用“大家以为”开头
-- 大量使用“当”字开头
-- 先给评价，再用冒号解释功能
-- 用“这个方向”“这个入口”加泛泛建议
-- 用空泛判断代替具体信息
-
-## 选题建议
-
-选题要贴近当下热度，尤其可以加入AI相关内容。
-
-优先写这些方向：
-
-- AI模型更新
-- AI Agent
-- AI coding
-- AI工作流
-- AI自动化
-- AI设计工具
-- crypto项目
-- 空投和积分
-- 链上工具
-- GitHub开源项目
-- 钱包、DeFi、L2、Restaking、SocialFi
-
-不要只写一个东西很火。要写清楚它对谁有用，能做什么，读者下一步可以看什么。
-
-## 如何使用
-
-最简单的方式：把这个仓库链接直接发给你的AI Agent。
+发给任何 Agent 一句话：
 
 ```text
-请读取并遵守这个仓库里的中文社交文案规则：
+按 human-social-copy 规则改写这段内容：
 https://github.com/0xMulight/human-social-copy
-
-把我接下来发的内容，改成适合X发布的中文社媒文案。
-要求使用Hook+干货+CTA结构，不要线程，去掉括号，去掉英文单词前后的空格，避免AI味重的词和句式。
 ```
 
-也可以直接复制通用Prompt：
+根据 Agent 类型读取不同文件：
 
-```text
-请按照Human Social Copy规则改写下面的内容。
+| Agent | 读取文件 |
+|---|---|
+| Hermes | `human-social-copy/SKILL.md`（作为 skill 安装） |
+| Claude Code | 自动读取 `CLAUDE.md` |
+| Codex / OpenAI | `AGENTS.md` 或 `human-social-copy/agents/openai.yaml` |
+| Gemini | `GEMINI.md` |
+| 任意 Agent | `prompts/universal-agent-prompt.md`（复制到系统提示词） |
 
-要求：
-使用简体中文。
-使用Hook+干货+CTA结构。
-不要写线程。
-不要使用括号。
-去除英文单词前后的空格。
-避免AI常见套话。
-避免先否定再转折的排比。
-避免先评价再用冒号解释。
-避免解释腔，能直接说结果就直接说。
-如果我用某个项目举例，只学习句式，不要把项目名写进固定规则。
-避免用空泛建议收尾。
-语言要朴素、具体、像真人分享。
+## 文件结构
+
+```
+human-social-copy/
+├── AGENTS.md                          # 通用 Agent 规则
+├── CLAUDE.md                          # Claude 入口
+├── GEMINI.md                          # Gemini 入口
+├── HERMES.md                          # Hermes 入口
+├── README.md                          # 项目说明（本文件）
+├── LICENSE
+├── CONTRIBUTING.md                    # 贡献指南
+├── human-social-copy/
+│   ├── SKILL.md                       # Hermes Skill 定义
+│   ├── agents/
+│   │   └── openai.yaml               # OpenAI Agent 配置
+│   └── references/
+│       ├── patterns.md               # 句式模式参考
+│       └── adaptive-hooks.md         # 自适应钩子
+├── prompts/
+│   └── universal-agent-prompt.md     # 通用 Prompt
+├── examples/
+│   └── before-after.md              # 🆕 改写前后对比
+└── .github/
+    └── workflows/
+        └── validate-skill.yml        # 🆕 CI 校验
 ```
 
-如果你的Agent支持Skill，可以读取：
+## 核心规则速览
 
-```text
-human-social-copy/SKILL.md
-```
+**结构**：Hook → 干货 → 轻 CTA
 
-如果你的Agent支持项目规则，可以读取：
+**禁用词 13 个**：旨在、赋能、打造、范式、这种、硬生生、扒、助力、路径、逻辑、痛点、说白了、护城河
 
-```text
-AGENTS.md
-```
+**禁用句式 6 种**：先否定再转折排比、"大家以为"开头、"当"字堆砌、先评价再冒号解释、"这个方向"加泛泛建议、空泛判断
 
-如果你的Agent只支持普通Prompt，可以读取：
+**中文规范**：简体中文、英文前后无空格、不用括号、不堆小标题
 
-```text
-prompts/universal-agent-prompt.md
-```
+## 贡献
 
-## 文件说明
+欢迎 PR 补充更自然的中文表达规则、句式模式或新的 Agent 适配文件。详见 `CONTRIBUTING.md`。
 
-- `AGENTS.md`：给Codex、OpenAI Agent和通用Agent看的项目规则
-- `human-social-copy/SKILL.md`：Skill文件
-- `prompts/universal-agent-prompt.md`：可以直接复制给任何Agent的Prompt
-- `CLAUDE.md`：给Claude使用的入口说明
-- `GEMINI.md`：给Gemini使用的入口说明
-- `HERMES.md`：给Hermes使用的入口说明
-- `human-social-copy/references`：钩子、结构和例句参考
+## 许可
 
-## 开源贡献
-
-欢迎补充更像真人的中文写法。
-
-新增规则时，请尽量写得具体，最好给出可直接替换的写法。不要只增加抽象要求。
+MIT © 2026 [0xMulight](https://github.com/0xMulight)
