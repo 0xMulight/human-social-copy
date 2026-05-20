@@ -1,160 +1,145 @@
+---
+name: human-social-copy
+description: "将 AI/工具/crypto 内容写成真人风格的中文社交媒体文案。用于写推文、X帖子、中文社交分享。"
+version: 1.1.0
+author: 0xMulight
+license: MIT
+metadata:
+  hermes:
+    tags: [chinese, social-media, writing, copywriting, twitter, x-platform]
+    category: social-media
+    triggers:
+      - "写推文"
+      - "改文案"
+      - "去AI味"
+      - "humanize"
+      - "中文社媒"
+      - "改成中文"
+      - "social copy"
+      - "改写"
+      - "润色"
+    related_skills: [hot-tools-tweet]
+---
+
 # Human Social Copy
 
-Use this skill when the user wants Chinese social media copy that feels human, practical, and ready to post. It works for X, Threads, Instagram, TikTok, crypto yap, airdrop analysis, AI tools, GitHub projects, product notes, and personal experience posts.
+将任何内容改写成真人风格的中文社交媒体文案。适用于 X/Twitter、Threads、Instagram、TikTok、crypto yap、空投分析、AI 工具分享、GitHub 项目介绍、产品复盘、经验分享。
 
-Default language: Simplified Chinese.
+默认语言：简体中文。
 
-## Goal
+## 目标
 
-Turn rough notes into a post with:
+把粗糙的内容改写成包含三个要素的帖子：
 
-1. Hook
-2. Useful value
-3. Soft CTA
+1. **Hook（钩子）** — 第一行抓住注意力
+2. **干货（Value）** — 中间给实在信息
+3. **轻 CTA** — 结尾引导一个轻动作
 
-Do not create a thread unless the user asks for one.
+不写线程，除非用户明确要求。
 
-## Core Rules
+## 核心规则
 
-- Write in Simplified Chinese.
-- Remove spaces around English words in Chinese text, for example `AI工具`, `GitHub项目`, `CTA结尾`.
-- Remove all parentheses from the final copy.
-- Keep the language plain and credible.
-- Avoid decorative wording, inflated claims, and announcement-style writing.
-- Do not overuse subheadings.
-- Do not write like a tutorial outline unless the user asks for one.
-- Preserve a strong original hook if it is already natural.
+- 使用简体中文
+- 去除英文单词前后的空格：`AI工具`、`GitHub项目`、`CTA结尾`
+- 去除所有括号
+- 语言朴素、可信，不堆华丽词
+- 不夸张、不绝对化、不写成公告稿或营销稿
+- 不过度使用小标题
 
-## Direct Sentence Rule
+## 禁用词清单
 
-Prefer direct sentences that explain the result.
+最终文案中不得出现以下词语：
 
-If the user gives a specific project only as an example, abstract the writing pattern. Do not add that project name as a fixed rule.
+| 禁用词 | 原因 |
+|---|---|
+| 旨在 | 公文腔 |
+| 赋能 | 营销套话 |
+| 打造 | 空洞 |
+| 范式 | 学术腔 |
+| 这种 | 口语赘余 |
+| 硬生生 | 矫情 |
+| 扒 | 不正式 |
+| 助力 | 套话 |
+| 路径 | 抽象 |
+| 逻辑 | 抽象 |
+| 痛点 | 陈词滥调 |
+| 说白了 | 解释腔 |
+| 护城河 | 投资黑话滥用 |
 
-When writing about a tool or project, answer what it can do, when it works, and which scenario it fits.
+## 禁用句式
 
-Good patterns:
+避免以下写法：
 
-- `{工具名}可以记录{信息A}、{信息B}和{信息C}。`
-- `{工具名}会在{触发时机}时，把{相关上下文}交给{使用者或Agent}。`
-- `{工具名}适合{具体人群}、{具体场景}、{具体问题}。`
+1. 先否定再转折的排比
+2. "大家以为……但实际上……" 开头
+3. "当……的时候" 句式堆砌
+4. 先给评价，再用冒号解释功能
+5. "这个方向""这个入口" 加泛泛建议收尾
+6. 空泛判断代替具体信息
 
-Avoid sentences that first judge the thing, then explain it with a colon.
+## 直给句优先
 
-Avoid broad endings about a direction, project, or entry point. Replace them with specific signals, actions, or outcomes.
+能直接说结果就直接写，不要先评价再冒号解释。
 
-## Banned Words
+推荐句式：
 
-Do not use these words in final Chinese copy:
+- `{工具名}可以{具体动作或结果}。`
+- `{工具名}会在{触发时机}时{具体动作}。`
+- `{工具名}适合{具体人群或场景}。`
 
-- 旨在
-- 赋能
-- 打造
-- 范式
-- 这种
-- 硬生生
-- 扒
-- 助力
-- 路径
-- 逻辑
-- 痛点
-- 说白了
-- 护城河
+写工具或项目时，优先回答三件事：
+- 能记录或提供什么
+- 在什么时机发挥作用
+- 适合什么场景
 
-## Banned Patterns
+如果用户拿某个项目举例，只学习句式，不把项目名写入固定规则。
 
-Avoid:
+## 钩子策略
 
-- The `不是...而是...` contrast pattern.
-- Repeated sentences starting with `当`.
-- Repeated openings with `大家以为`.
-- Hype-only claims.
-- Empty advice without a concrete next step.
-- Colon explanations after a vague judgement.
-- Generic endings using `这个方向` or `这个入口`.
+不要套固定模板。先判断原始内容里最吸引人的信息，再决定第一句怎么写。
 
-## Topic Selection
+检查顺序：
+1. 和什么热点有关
+2. 谁最需要这条信息
+3. 读者看完能马上做什么
+4. 有什么风险或误区要提醒
+5. 有没有真实体验或数据可用
+6. 有没有具体入口/工具/项目能直接说明作用
 
-Prefer topics close to current attention:
+可用钩子类型：热点切入、具体收益、真实经验、人群切入、风险提醒、工具直给。
 
-- AI models
-- AI Agent
-- AI coding
-- AI workflow
-- AI automation
-- AI design tools
-- crypto projects
-- airdrops and points
-- on-chain tools
-- GitHub open-source projects
-- wallets, DeFi, L2, Restaking, SocialFi
+详见 `references/adaptive-hooks.md` 和 `references/patterns.md`。
 
-A topic should answer at least one of these:
+## 选题方向
 
-- Who should care?
-- What can it do?
-- What changed?
-- What can the reader try next?
-- What risk should the reader avoid?
+贴近当下热度，优先写：
 
-## Hook Guidance
+- AI 模型更新、AI Agent、AI coding、AI 工作流、AI 自动化、AI 设计工具
+- crypto 项目、空投和积分、链上工具
+- GitHub 开源项目、开发者工具、效率工具
+- 钱包、DeFi、L2、Restaking、SocialFi
+- 真实经验复盘、踩坑提醒、工具对比、信息筛选方法
 
-Choose the hook based on the strongest information in the source. Do not force every post into the same opening.
+不写"某某很火"——要写清楚对谁有用、能做什么、下一步看什么。
 
-Useful hook types:
+## 推送前检查清单
 
-- Specific benefit: `这个工具可以把AI写作里的废话先砍掉一半。`
-- Personal experience: `我试了几轮，发现空投内容最容易死在第一行。`
-- Timely angle: `AI Agent开始接管更多链上操作后，钱包会变得更重要。`
-- Audience angle: `如果你经常用AI写中文推文，先把这几类句子删掉。`
-- Risk reminder: `很多项目内容不差，问题出在写法太像公告。`
+- [ ] 第一行能让人停下来
+- [ ] 中间有具体信息，没有空洞评价
+- [ ] 结尾是轻 CTA，不强行号召
+- [ ] 没有括号
+- [ ] 中英文之间无空格
+- [ ] 没有禁用词（13 个清单全部过一遍）
+- [ ] 没用禁用句式
+- [ ] 没有线程（除非用户要求）
 
-## Value Guidance
+## 文件说明
 
-The middle part should be specific. Add practical information such as:
+- `references/patterns.md` — 句式模板和替换建议
+- `references/adaptive-hooks.md` — 自适应钩子策略
+- `prompts/universal-agent-prompt.md` — 可直接复制的通用 Prompt
 
-- Who it helps
-- What it does
-- How to use it
-- What to check
-- What to avoid
-- Real examples
-- Personal observations
-- Reusable methods
+## 版本历史
 
-## CTA Guidance
-
-Use a light CTA. Do not sound like sales copy.
-
-Examples:
-
-- `先收藏，写推文前对照删一遍。`
-- `你也可以拿自己的内容试一下，看第一行有没有留住人。`
-- `如果你在做AI或crypto内容，这套规则可以直接丢给Agent用。`
-- `有更像真人的写法，也可以直接提PR补进去。`
-
-## Process
-
-1. Identify the strongest shareable point in the source.
-2. Keep factual information. Do not invent details.
-3. Write a first line that can hold attention.
-4. Rewrite the body into practical, concrete information.
-5. Remove banned words and banned patterns.
-6. Remove parentheses.
-7. Remove spaces around English words in Chinese text.
-8. End with a soft CTA.
-
-## Final Check
-
-Before answering, check:
-
-- Hook is strong and natural.
-- The post has useful information.
-- CTA is light.
-- No parentheses.
-- No banned words.
-- No spaces around English words in Chinese text.
-- No `不是...而是...` structure.
-- No vague judgement followed by a colon explanation.
-- No generic direction or entry-point ending.
-- The copy sounds like a real person sharing useful experience.
+- v1.1.0 — 完善 frontmatter、优化写作规范结构
+- v1.0.0 — 初始版本
