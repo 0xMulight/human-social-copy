@@ -1,0 +1,49 @@
+name: Validate SKILL.md
+
+on:
+  push:
+    paths:
+      - 'human-social-copy/SKILL.md'
+  pull_request:
+    paths:
+      - 'human-social-copy/SKILL.md'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check YAML frontmatter
+        run: |
+          python3 -c "
+          import sys, yaml
+          with open('human-social-copy/SKILL.md') as f:
+              content = f.read()
+          parts = content.split('---')
+          if len(parts) < 3:
+              print('ERROR: Missing YAML frontmatter')
+              sys.exit(1)
+          fm = yaml.safe_load(parts[1])
+          required = ['name', 'description', 'version']
+          for key in required:
+              if key not in fm:
+                  print(f'ERROR: Missing required field: {key}')
+                  sys.exit(1)
+          print(f'OK: skill "{fm["name"]}" v{fm["version"]}')
+          "
+        shell: bash
+
+      - name: Check required sections
+        run: |
+          python3 -c "
+          import sys
+          with open('human-social-copy/SKILL.md') as f:
+              content = f.read()
+          sections = ['核心规则', '禁用词', '钩子', '推送前检查']
+          for s in sections:
+              if s not in content:
+                  print(f'WARNING: Missing section: {s}')
+          print('Section check complete')
+          "
+        shell: bash
