@@ -1,7 +1,7 @@
 ---
 name: human-social-copy
 description: "将 AI/工具/crypto 内容写成真人风格的中文社交媒体文案。用于写推文、X帖子、中文社交分享。"
-version: 2.7.0
+version: 2.8.0
 author: 0xMulight
 metadata:
   hermes:
@@ -147,6 +147,8 @@ Do not use these words in final Chinese copy:
 - 痛点
 - 说白了
 - 护城河
+- 还有
+- 东西
 
 ## Banned Patterns
 
