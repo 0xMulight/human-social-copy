@@ -1,7 +1,7 @@
 ---
 name: human-social-copy
 description: "将 AI/工具/crypto 内容写成真人风格的中文社交媒体文案。用于写推文、X帖子、中文社交分享。"
-version: 2.2.0
+version: 2.3.0
 author: 0xMulight
 metadata:
   hermes:
@@ -62,6 +62,20 @@ Good patterns:
 Avoid sentences that first judge the thing, then explain it with a colon.
 
 Avoid broad endings about a direction, project, or entry point. Replace them with specific signals, actions, or outcomes.
+
+## 禁用冒号标题
+
+不要在正文里用"一个感受：""几个让我留下来的点：""总结：""我的看法："这类空洞的冒号标题来组织段落。
+
+唯一例外：**教程类内容**可以带冒号标题，比如：
+- `安装教程：`
+- `操作步骤：`
+- `常见坑：`
+- `分享四点：`
+
+判断标准：冒号前的词必须有具体信息指向（教程/步骤/坑），不能是抽象感受词。
+
+---
 
 ## Banned Words
 
@@ -218,16 +232,17 @@ Examples:
 
 ## Final Check
 
-Before answering, check:
+Before answering, run every check. **Re-read the full output character by character.** The #1 missed violation in sponsored posts is `不是...而是...` — agents skip it because the contrast "feels natural" in Chinese, but it's banned. Never ship without scanning:
 
-- Hook is strong and natural.
-- The post has useful information.
-- **Source URL (GitHub/project link) is included in the copy.**
-- CTA is light.
-- No parentheses.
-- No banned words.
-- No spaces around English words in Chinese text.
-- No `不是...而是...` structure.
+- Hook is strong and natural. Does the first line have a concrete object or benefit, not a vague judgment?
+- The post has useful information, not just sentiment.
+- **Links: only include URLs the brief explicitly requires.** Do not add links the brief didn't ask for.
+- CTA is light — no sales language, no "赶紧" / "千万别错过".
+- No parentheses — `（）` or `()`.
+- No banned words: 旨在, 赋能, 打造, 范式, 这种, 硬生生, 扒, 助力, 路径, 逻辑, 痛点, 说白了, 护城河.
+- No spaces around English words in Chinese text. Scan for `[CJK][space][ASCII]` and `[ASCII][space][CJK]`.
+- **No `不是...而是...` structure anywhere.** Search the output for the substring `不是`. Every hit must be rephrased.
 - No vague judgement followed by a colon explanation.
 - No generic direction or entry-point ending.
-- The copy sounds like a real person sharing useful experience.
+- No "AI product review template" feel: no paired pros/cons paragraphs, no numbered takeaways, no "几个让我留下来的点" / "当然也有还在磨合的地方" structure.
+- The copy sounds like a real person sharing useful experience, not a balanced review.
