@@ -1,7 +1,7 @@
 ---
 name: human-social-copy
 description: "将 AI/工具/crypto 内容写成真人风格的中文社交媒体文案。用于写推文、X帖子、中文社交分享。"
-version: 2.10.1
+version: 2.10.2
 author: 0xMulight
 metadata:
   hermes:
@@ -288,21 +288,25 @@ GitHub API 和 HN 偏向开发者工具。面向普通用户的 AI 工具，用 
 
 ## 写作流程
 
-1. 从素材里找出最强的可传播点。
-2. 保留事实信息。不要凭空编造细节。如果素材有 URL（GitHub、官网等），最终文案里要带上。
-3. **打开 `references/adaptive-hooks.md`。快速决策表对号入座选模型 → 模板库匹配句式 → 填入具体信息。不要自己原创钩子结构。**
-4. 把正文重写成具体、可操作的信息。
-5. 删除禁用词和禁用句式。
-6. 删除所有括号。
-7. 删除中文和英文单词之间的空格。
-8. 在 CTA 前面单独一行放来源 URL（GitHub/项目链接）。
-9. 以轻量 CTA 结尾。
+**在写任何一个字之前：**
+
+1. **先加载全部参考文件。** `references/adaptive-hooks.md`（钩子模型+模板库）、`references/patterns.md`（句式模式）、`references/sourcing-playbook.md`（素材策略）、`references/kol-brief-workflow.md`（KOL Brief 处理）。这四个文件的规则必须全部激活后再动笔。
+2. **先选钩子。** 打开 `references/adaptive-hooks.md`，快速决策表对号入座选模型 → 模板库匹配句式 → 填入具体信息。钩子没定好之前不要写正文。不要自己原创钩子结构。
+3. **写作时对照 `references/patterns.md`。** 正文句式参照 patterns.md 的七类模板来写，不要自由发挥句式结构。
+4. 从素材里找出最强的可传播点。
+5. 保留事实信息。不要凭空编造细节。如果素材有 URL（GitHub、官网等），最终文案里要带上。
+6. 把正文重写成具体、可操作的信息。
+7. 删除禁用词和禁用句式。
+8. 删除所有括号。
+9. 删除中文和英文单词之间的空格。
+10. 在 CTA 前面单独一行放来源 URL（GitHub/项目链接）。
+11. 以轻量 CTA 结尾。
 
 ## 最终检查
 
-交稿前逐条检查。**逐字重读全文。** 赞助帖里最容易漏掉的是 `不是...而是...`——Agent 觉得"这个对比很自然"就跳过了，但它是禁止的。扫描不到不提交：
+交稿前逐条检查。**逐字重读全文。** Never ship without scanning:
 
-- **钩子：对照 `references/adaptive-hooks.md` 中的8大模型确认钩子对号入座了。钩子是从模板库里选的句式，不是自己原创的结构。第一行有具体对象或具体收益，不是空泛判断。**
+- **钩子：先确认是否已加载全部四个 reference 文件（adaptive-hooks.md / patterns.md / sourcing-playbook.md / kol-brief-workflow.md）。对照 `references/adaptive-hooks.md` 中的8大模型确认钩子对号入座了。钩子是从模板库里选的句式，不是自己原创的结构。第一行有具体对象或具体收益，不是空泛判断。**
 - 钩子是否有力且自然。第一行有具体对象或具体收益，不是空泛判断。
 - 帖子有用信息，不只是情绪。
 - **链接：只放需求明确要求的 URL。** 不要加需求没要求的链接。
