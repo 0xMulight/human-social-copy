@@ -1,7 +1,7 @@
 ---
 name: human-social-copy
 description: "将 AI/工具/crypto 内容写成真人风格的中文社交媒体文案。用于写推文、X帖子、中文社交分享。"
-version: 2.10.0
+version: 2.10.1
 author: 0xMulight
 metadata:
   hermes:
@@ -18,50 +18,47 @@ metadata:
       - "推文"
 ---
 
-# Human Social Copy
+# 真人社交媒体文案
 
-Use this skill when the user wants Chinese social media copy that feels human, practical, and ready to post. It works for X, Threads, Instagram, TikTok, crypto yap, airdrop analysis, AI tools, GitHub projects, product notes, and personal experience posts.
+当用户需要像真人写的中文社交媒体文案时使用此技能。适用于 X、Threads、Instagram、TikTok、Crypto 讨论、空投分析、AI 工具、GitHub 项目、产品体验、个人经验分享等场景。
 
-Default language: Simplified Chinese.
+默认语言：简体中文。
 
-## Goal
+## 目标
 
-Turn rough notes into a post with:
+把原始素材变成一篇带以下结构的好帖子：
 
-1. Hook
-2. Useful value
-3. Soft CTA
+1. 钩子
+2. 有用信息
+3. 轻量 CTA
 
-Do not create a thread unless the user asks for one.
+除非用户明确要求，不要写成 thread。
 
-## Core Rules
+## 基础规则
 
-- Write in Simplified Chinese.
-- Remove spaces around English words in Chinese text, for example `AI工具`, `GitHub项目`, `CTA结尾`.
-- Remove all parentheses from the final copy.
-- Keep the language plain and credible.
-- Avoid decorative wording, inflated claims, and announcement-style writing.
-- Do not overuse subheadings.
-- Do not write like a tutorial outline unless the user asks for one.
-- Preserve a strong original hook if it is already natural.
+- 用简体中文写。
+- 中文和英文单词之间不要加空格，比如 `AI工具`、`GitHub项目`、`CTA结尾`。
+- 删除最终文案中所有的括号（包括 `（）` 和 `()`）。
+- 语言平实可信，不用装饰性措辞、不夸大、不像公告。
+- 不要滥用小标题。
+- 不要写成教程大纲（除非用户要求）。
+- 如果原文第一句钩子已经自然有力，保留并轻微优化即可。
 
-## Direct Sentence Rule
+## 直接陈述规则
 
-Prefer direct sentences that explain the result.
+优先用直接陈述结果的句子。
 
-If the user gives a specific project only as an example, abstract the writing pattern. Do not add that project name as a fixed rule.
+如果用户只是举例某个项目，要抽象出写作模式，不要把那个项目名变成固定规则。
 
-When writing about a tool or project, answer what it can do, when it works, and which scenario it fits.
+写工具或项目时，回答清楚：它能做什么、什么时候起作用、适合什么场景。
 
-Good patterns:
+好句式：
 
 - `{工具名}可以记录{信息A}、{信息B}和{信息C}。`
 - `{工具名}会在{触发时机}时，把{相关上下文}交给{使用者或Agent}。`
 - `{工具名}适合{具体人群}、{具体场景}、{具体问题}。`
 
-Avoid sentences that first judge the thing, then explain it with a colon.
-
-Avoid broad endings about a direction, project, or entry point. Replace them with specific signals, actions, or outcomes.
+避免先用模糊评价判断一件事，再用冒号解释。避免以"这个方向""这个入口"之类泛词结尾，换成具体的信号、动作或结果。
 
 ## 禁用冒号标题
 
@@ -130,9 +127,9 @@ Avoid broad endings about a direction, project, or entry point. Replace them wit
 
 ---
 
-## Banned Words
+## 禁用词
 
-Do not use these words in final Chinese copy:
+最终中文文案里不要出现这些词：
 
 - 旨在
 - 赋能
@@ -149,94 +146,94 @@ Do not use these words in final Chinese copy:
 - 护城河
 - 东西（太模糊时禁用，换成具体名词。比如这个东西→这个工具/项目/功能）
 
-## Banned Patterns
+## 禁用句式
 
-Avoid:
+禁止以下写法：
 
-- The `不是...而是...` contrast pattern.
-- Repeated sentences starting with `当`.
-- Repeated openings with `大家以为`.
-- Hype-only claims.
-- Empty advice without a concrete next step.
-- Colon explanations after a vague judgement.
-- Generic endings using `这个方向` or `这个入口`.
+- `不是...而是...` 对比句式。
+- 连续多个句子以 `当` 开头。
+- 反复用 `大家以为` 开头。
+- 纯吹嘘没有具体信息。
+- 空泛的建议没有可执行的下一步。
+- 模糊评价后加冒号解释。
+- 以 `这个方向` 或 `这个入口` 结尾。
 
-## Topic Selection
+## 选题指南
 
-Prefer topics close to current attention:
+优先选跟近期热点贴近的话题：
 
-- AI models
+- AI 模型
 - AI Agent
-- AI coding
-- AI workflow
-- AI automation
-- AI design tools
-- crypto projects
-- airdrops and points
-- on-chain tools
-- GitHub open-source projects
-- wallets, DeFi, L2, Restaking, SocialFi
+- AI 编程
+- AI 工作流
+- AI 自动化
+- AI 设计工具
+- Crypto 项目
+- 空投和积分
+- 链上工具
+- GitHub 开源项目
+- 钱包、DeFi、L2、Restaking、SocialFi
 
-A topic should answer at least one of these:
+每篇选题至少要能回答以下之一：
 
-- Who should care?
-- What can it do?
-- What changed?
-- What can the reader try next?
-- What risk should the reader avoid?
+- 谁应该关心？
+- 它能做什么？
+- 什么变了？
+- 读者下一步能试什么？
+- 读者应该避开什么风险？
 
-### Engagement-first selection
+### 互动优先原则
 
-The goal is likes, retweets, comments, and bookmarks. Select content that is inherently shareable:
+目标是点赞、转发、评论、收藏。选内容时优先挑自带传播力的：
 
-1. **Tools > Opinions.** A GitHub repo with a concrete stat (e.g. "98% fewer tokens") outperforms a philosophical essay every time. Pick tools, extensions, libraries, CLI apps — things people can try immediately.
-2. **Numbers hook harder than narratives.** "比grep省98% token" gets retweeted. "AI is a technology not a product" gets scrolled past. Pull the strongest quantifiable claim from the source and lead with it.
-3. **Open source + self-hostable = bookmarks.** Tools people can clone and run themselves get saved for later.
-4. **Show HN / Launch HN projects** are gold — they are fresh, unposted, and the author is hungry for attention (they will engage with your tweet).
+1. **工具 > 观点。** 一个带具体数字的 GitHub 项目（比如"省 98% token"）永远比一篇哲学文章强。选工具、插件、库、CLI 应用——人能立刻上手试的东西。
+2. **数字比叙事更抓人。** "比 grep 省 98% token" 会被转发。"AI 是技术不是产品" 会被划过。从素材里抓最强的量化结论放在前面。
+3. **开源 + 可自部署 = 收藏。** 人能 clone 下来自己跑的项目会被保存。
+4. **Show HN / Launch HN 项目** 是金矿——新鲜、没人发过、作者渴望关注（他们会跟你的推文互动）。
 
-### Accessibility filter (CRITICAL)
+### 普通人能懂原则（关键）
 
-Every selected topic must pass the **grandma test**: can a non-technical person understand what this tool does and why they'd want it, in under 10 seconds?
+每篇选题必须通过**奶奶测试**：一个非技术人员能不能在 10 秒内理解这个工具是干嘛的、为什么想要？
 
-Pass: VoiceBox (clone any voice for free), GPT Image tools (generate images from text), AI writing tools, video generators, photo editors.
-Fail: multi-agent orchestration engines, LLM inference frameworks, architecture visualizers, code search tools, anything with "framework" or "orchestration" or "pipeline" in the pitch.
+通过：VoiceBox（免费克隆任何声音）、GPT 图片工具（文字生成图片）、AI 写作工具、视频生成器、照片编辑器。
+不通过：多 Agent 编排引擎、LLM 推理框架、架构可视化工具、代码搜索工具、任何推广语里带"框架""编排""流水线"的东西。
 
-The user explicitly rejected architecture/developer content: "什么什么架构 我看了都不懂". If the best item in the scout results is a developer framework, keep scrolling.
+用户明确拒绝过架构/开发者内容："什么什么架构 我看了都不懂"。如果搜索结果里最好的条目是开发者框架，继续往下翻。
 
-### What to skip (anti-patterns)
+### 不要写的内容
 
-Do NOT write tweets about:
+不要写这些类型的推文：
 
-- Opinion essays, think-pieces, "AI is X not Y" hot takes
-- Philosophy-of-AI articles (e.g. "I don't think AI will make your processes go faster")
-- News about partnerships, funding rounds, or corporate announcements (unless the user explicitly asks)
-- **Architecture, frameworks, orchestration engines** — anything where the pitch is "build/deploy/orchestrate" rather than "use/enjoy/create"
-- **Developer-only tools** — code search, CI plugins, LSP servers, build tools. If only an engineer would bookmark it, skip it.
-- Anything that cannot answer "what can the reader try next?"
-- Content where the only shareable angle is "this is interesting to think about"
+- 观点文章、深度思考、"AI 不是 X 而是 Y"式金句
+- AI 哲学文章（比如"我不认为 AI 能让你的流程变快"）
+- 合作、融资、公司公告类新闻（除非用户明确要求）
+- **架构、框架、编排引擎**——推广语是"构建/部署/编排"而非"使用/享受/创作"的任何东西
+- **纯开发者工具**——代码搜索、CI 插件、LSP 服务器、构建工具。只有工程师会收藏的东西，跳过。
+- 无法回答"读者下一步能做什么"的内容
+- 唯一可分享的角度是"挺有意思值得思考"的内容
 
-If the best item in the scout results is an opinion piece or developer tool, keep scrolling until you find a tool a regular person would want to try.
+如果搜索结果里最好的条目是观点文章或开发者工具，继续往下翻，直到找到一个普通人会想试试的工具。
 
-### Sourcing strategy
+### 素材挖掘策略
 
-See `references/sourcing-playbook.md` for concrete queries, thresholds, and the VoiceBox case study.
+具体查询语句、阈值和 VoiceBox 案例见 `references/sourcing-playbook.md`。
 
-GitHub API and HN are biased toward developer tools. For consumer-facing AI tools, Twitter/Surf social with natural-language queries consistently outperforms:
+GitHub API 和 HN 偏向开发者工具。面向普通用户的 AI 工具，用 Twitter/Surf 社交搜索加自然语言查询效果更好：
 
-Good queries: "AI image generator free", "AI video tool free", "AI voice clone app", "best free AI tools"
-Bad queries: "topic:ai+stars:>50" (returns frameworks), "AI tool open source" (returns dev tools)
+好查询："AI image generator free"、"AI video tool free"、"AI voice clone app"、"best free AI tools"
+坏查询："topic:ai+stars:>50"（返回框架）、"AI tool open source"（返回开发工具）
 
-The winning pattern from this session: a Surf social hit for an "open-source alternative to paid tool X" (VoiceBox replacing ElevenLabs) had 26k+ GitHub stars and 400+ Twitter likes — consumer-friendly, free, replaces a known paid product. This is the ideal content shape.
+验证过的成功模式：Surf 社交搜到一个"付费工具 X 的开源替代品"（VoiceBox 替代 ElevenLabs）——面向普通用户、免费、替代已知付费产品。这就是理想内容形态。
 
-### Platform metrics ban
+### 平台数据禁提
 
-Never mention platform metrics (star counts, like counts, comment counts) in the final tweet. No "HN上277赞93评论", no "GitHub 26k stars", no "Twitter 400 likes". The tool's value must speak for itself through what it does, not through social proof numbers. Let the reader discover the popularity on their own.
+永远不要在最终推文里提平台数据（星标数、点赞数、评论数）。不要出现"HN上277赞93评论"、不要"GitHub 26k stars"、不要"Twitter 400 likes"。工具的价值要通过它自己的功能来证明，不是靠社交证明数字。让读者自己去发现它的受欢迎程度。
 
-⚠️ **This ban applies ONLY to numbers/metrics. It does NOT forbid including GitHub/URL links.** The link itself (e.g. `github.com/author/repo`) must always be present in tool tweets — the reader needs to know where to find the tool. Just don't mention how many stars it has.
+⚠️ **这个禁令只针对数字/指标。不禁 GitHub/URL 链接。** 链接本身（比如 `github.com/作者/仓库`）在工具类推文里必须有——读者需要知道去哪找这个工具。只是别提它有多少星标。
 
-⚠️ **This ban applies ONLY to numeric metrics (star counts, like counts, comment counts, view counts). It does NOT forbid including the GitHub URL or project link itself. If the source is a GitHub project, always include the GitHub URL in the final copy — just don't say how many stars it has.** This rule has been misinterpreted by agents as "don't link to GitHub" in past sessions, causing links to be omitted from delivered tweets. Link = required. Metrics = banned.
+⚠️ **过去的 session 里 Agent 曾误读这条规则为"不要放 GitHub 链接"，导致推文里丢了链接。重申：链接 = 必须。指标 = 禁止。**
 
-## Hook Guidance
+## 钩子指南
 
 钩子决定帖子生死。**不要自己原创钩子结构**——先看 `references/adaptive-hooks.md`，按8大模型判断内容类型，再从模板库里选最接近的句式填入具体信息。
 
@@ -265,57 +262,56 @@ Never mention platform metrics (star counts, like counts, comment counts) in the
 
 详细模板和例句见 `references/adaptive-hooks.md`。
 
-## Value Guidance
+## 正文写法指南
 
-The middle part should be specific. Add practical information such as:
+正文中间部分要具体。加上这些实用信息：
 
-- Who it helps
-- What it does
-- How to use it
-- What to check
-- What to avoid
-- Real examples
-- Personal observations
-- Reusable methods
+- 帮了谁
+- 做了什么
+- 怎么用
+- 要检查什么
+- 要避开什么
+- 真实案例
+- 个人观察
+- 可复用的方法
 
-## CTA Guidance
+## CTA 指南
 
-Use a light CTA. Do not sound like sales copy.
+用轻量 CTA。不要像销售文案。
 
-Examples:
+示例：
 
 - `先收藏，写推文前对照删一遍。`
 - `你也可以拿自己的内容试一下，看第一行有没有留住人。`
 - `如果你在做AI或crypto内容，这套规则可以直接丢给Agent用。`
 - `有更像真人的写法，也可以直接提PR补进去。`
 
-## Process
+## 写作流程
 
-1. Identify the strongest shareable point in the source.
-2. Keep factual information. Do not invent details. If the source has a URL (GitHub, official site, etc.), include it in the final copy.
-3. **Open `references/adaptive-hooks.md`. 快速决策表对号入座选模型 → 模板库匹配句式 → 填入具体信息。不要自己原创钩子结构。**
-4. Rewrite the body into practical, concrete information.
-5. Remove banned words and banned patterns.
-6. Remove parentheses.
-7. Remove spaces around English words in Chinese text.
-8. Include the source URL (GitHub/project link) on its own line before the CTA.
-9. End with a soft CTA.
+1. 从素材里找出最强的可传播点。
+2. 保留事实信息。不要凭空编造细节。如果素材有 URL（GitHub、官网等），最终文案里要带上。
+3. **打开 `references/adaptive-hooks.md`。快速决策表对号入座选模型 → 模板库匹配句式 → 填入具体信息。不要自己原创钩子结构。**
+4. 把正文重写成具体、可操作的信息。
+5. 删除禁用词和禁用句式。
+6. 删除所有括号。
+7. 删除中文和英文单词之间的空格。
+8. 在 CTA 前面单独一行放来源 URL（GitHub/项目链接）。
+9. 以轻量 CTA 结尾。
 
-## Final Check
+## 最终检查
 
-Before answering, run every check. **Re-read the full output character by character.** The #1 missed violation in sponsored posts is `不是...而是...` — agents skip it because the contrast "feels natural" in Chinese, but it's banned. Never ship without scanning:
+交稿前逐条检查。**逐字重读全文。** 赞助帖里最容易漏掉的是 `不是...而是...`——Agent 觉得"这个对比很自然"就跳过了，但它是禁止的。扫描不到不提交：
 
-- **Hook: 对照 `references/adaptive-hooks.md` 中的8大模型确认钩子对号入座了。钩子是从模板库里选的句式，不是自己原创的结构。第一行有具体对象或具体收益，不是空泛判断。**
-
-- Hook is strong and natural. Does the first line have a concrete object or benefit, not a vague judgment?
-- The post has useful information, not just sentiment.
-- **Links: only include URLs the brief explicitly requires.** Do not add links the brief didn't ask for.
-- CTA is light — no sales language, no "赶紧" / "千万别错过".
-- No parentheses — `（）` or `()`.
-- No banned words: 旨在, 赋能, 打造, 范式, 这种, 硬生生, 扒, 助力, 路径, 逻辑, 痛点, 说白了, 护城河.
-- No spaces around English words in Chinese text. Scan for `[CJK][space][ASCII]` and `[ASCII][space][CJK]`.
-- **No `不是...而是...` structure anywhere.** Search the output for the substring `不是`. Every hit must be rephrased.
-- No vague judgement followed by a colon explanation.
-- No generic direction or entry-point ending.
-- No "AI product review template" feel: no paired pros/cons paragraphs, no numbered takeaways, no "几个让我留下来的点" / "当然也有还在磨合的地方" structure.
-- The copy sounds like a real person sharing useful experience, not a balanced review.
+- **钩子：对照 `references/adaptive-hooks.md` 中的8大模型确认钩子对号入座了。钩子是从模板库里选的句式，不是自己原创的结构。第一行有具体对象或具体收益，不是空泛判断。**
+- 钩子是否有力且自然。第一行有具体对象或具体收益，不是空泛判断。
+- 帖子有用信息，不只是情绪。
+- **链接：只放需求明确要求的 URL。** 不要加需求没要求的链接。
+- CTA 轻量——没有销售语气，没有"赶紧""千万别错过"。
+- 没有括号——`（）` 和 `()`。
+- 没有禁用词：旨在, 赋能, 打造, 范式, 这种, 硬生生, 扒, 助力, 路径, 逻辑, 痛点, 说白了, 护城河。
+- 中英文之间没有空格。检查 `[CJK][空格][ASCII]` 和 `[ASCII][空格][CJK]`。
+- **全文没有 `不是...而是...` 结构。** 搜索全文，每个 `不是` 都必须改写。
+- 没有模糊评价后加冒号解释。
+- 没有泛泛的"方向"或"入口"结尾。
+- 没有"AI产品测评模板"感：没有成对的优缺点段落、没有编号总结、没有"几个让我留下来的点""当然也有还在磨合的地方"这种结构。
+- 读起来像一个真人分享有用的经验，不像一篇平衡的产品测评。
