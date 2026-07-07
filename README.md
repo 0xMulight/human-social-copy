@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/Hermes-skill-8A2BE2" alt="Hermes Skill">
   <img src="https://img.shields.io/badge/language-简体中文-red" alt="Language">
   <img src="https://img.shields.io/badge/Agents-All-brightgreen" alt="Agent Support">
-  <img src="https://img.shields.io/badge/version-2.12.0-orange" alt="Version">
+  <img src="https://img.shields.io/badge/version-2.13.0-orange" alt="Version">
 </p>
 
 <p align="center">
@@ -21,10 +21,11 @@
 
 它适合X、Threads、Instagram、TikTok，也适合AI工具、GitHub项目、crypto、空投、美股、宏观、财报、市场复盘和图文内容。
 
-这套规则分两层：
+这套规则分三层：
 
 1. 通用表达规则：去AI味、去套话、保留具体信息。
-2. 个人语气系统：从用户旧内容里提取语气画像，让AI写得更像用户本人。
+2. 内容场景规则：金融、图文、选题、合作brief分别有专门约束。
+3. 个人语气系统：内置`0xmulight-voice-profile.md`，让AI写得更像0xMulight本人。
 
 ### 和普通写作规则的区别
 
@@ -34,7 +35,7 @@
 | 维护方式 | 贴在对话里 | Git版本管理，PR协作 |
 | 规则粒度 | 笼统要求 | 钩子、句式、禁用词、金融规则、图文排版、个人语气 |
 | 学习成本 | 每次重新解释 | clone即用，Agent自动读取 |
-| 语气控制 | 只能要求“像真人” | 先提取用户语气画像，再按语气画像生成 |
+| 语气控制 | 只能要求“像真人” | 先加载0xMulight语气画像，再按本人表达生成 |
 
 ## 效果对比
 
@@ -58,7 +59,7 @@
 | 固定句式 | 禁止`不是...而是...`、先评价再冒号解释等 |
 | 金融内容空泛 | 用`finance-writing.md`拆事件、预期、影响、观察信号和风险提示 |
 | 图文排版松散 | 用`layout-playbook.md`整理标题、开头、正文骨架、结尾互动和配图 |
-| AI写不像本人 | 用`voice-system.md`建立语气画像，再按用户语气生成 |
+| AI写不像0xMulight | 用`0xmulight-voice-profile.md`固定本人语气：币圈视角、资本游戏、调侃拆局 |
 | 选题没有动作 | 用`sourcing-playbook.md`先判断读者能不能马上理解、收藏或尝试 |
 | 合作内容像广告 | 用`kol-brief-workflow.md`把brief卖点改成具体场景和风险边界 |
 
@@ -71,16 +72,16 @@
 https://github.com/0xMulight/human-social-copy
 ```
 
-如果要让AI写出自己的语气，先用这个Prompt采集语气：
+如果要写得像0xMulight本人，用这句话：
+
+```text
+先加载human-social-copy/references/0xmulight-voice-profile.md，再按human-social-copy规则改写下面这段内容。
+```
+
+如果要给其他人建立语气画像，先用这个Prompt采集语气：
 
 ```text
 使用prompts/voice-capture-prompt.md，分析我过去写过的5到10篇内容，生成我的个人语气画像。
-```
-
-再用这句话生成内容：
-
-```text
-按我的个人语气画像和human-social-copy规则，改写下面这段内容。
 ```
 
 根据Agent类型读取不同文件：
@@ -92,25 +93,32 @@ https://github.com/0xMulight/human-social-copy
 | Codex/OpenAI | `AGENTS.md`或`human-social-copy/agents/openai.yaml` |
 | Gemini | `GEMINI.md` |
 | 任意Agent | `prompts/universal-agent-prompt.md` |
+| 0xMulight语气 | `human-social-copy/references/0xmulight-voice-profile.md` |
 | 语气采集 | `prompts/voice-capture-prompt.md` |
 
 ## 核心规则速览
 
 ### 写作流程
 
-**⒈ 先加载reference → ⒉ 有旧内容先提取语气画像 → ⒊ 选钩子 → ⒋ 对照句式写正文 → ⒌ 按内容类型补金融或排版规则 → ⒍ Final Check逐条扫描**
+**⒈ 先加载reference → ⒉ 默认加载0xMulight语气画像 → ⒊ 选钩子 → ⒋ 对照句式写正文 → ⒌ 按内容类型补金融或排版规则 → ⒍ Final Check逐条扫描**
 
 ### 个人语气优先级
 
 写作时优先级如下：
 
 1. 事实准确
-2. 用户语气
+2. 0xMulight语气
 3. 内容结构
 4. 平台适配
 5. 传播性
 
-如果传播性会破坏用户语气，优先保留用户语气。
+如果传播性会破坏0xMulight语气，优先保留本人语气。
+
+### 0xMulight语气关键词
+
+币圈视角、资本游戏、供需、估值、流动性、抛压、高FDV低流通、泡沫派发、梦想归梦想、K线归K线。
+
+不要写成财经媒体通稿，也不要写成老师讲课。更像是边吐槽边拆局。
 
 ### 钩子
 
@@ -124,7 +132,7 @@ https://github.com/0xMulight/human-social-copy
 | 有经验复盘 | 先写真实观察或具体结果 |
 | 有金融事件 | 先写该看哪个信号，不要直接预测涨跌 |
 | 有长图文 | 先用标题和开头留人，再控制正文重点 |
-| 有个人旧内容 | 先提取语气画像，再生成新内容 |
+| 要像0xMulight | 优先使用冷知识、反问、直接判断、调侃开场 |
 
 ### 禁用词14个
 
@@ -158,7 +166,8 @@ human-social-copy/
 │       ├── patterns.md                # 句式模式和反模式
 │       ├── finance-writing.md         # 美股/加密/宏观/财报内容规则
 │       ├── layout-playbook.md         # 图文排版和信息图规则
-│       ├── voice-system.md            # 个人语气采集和复用规则
+│       ├── voice-system.md            # 通用个人语气采集和复用规则
+│       ├── 0xmulight-voice-profile.md # 0xMulight个人语气画像
 │       ├── sourcing-playbook.md       # 素材挖掘和选题判断
 │       └── kol-brief-workflow.md      # KOL Brief处理和赞助帖防翻车
 ├── prompts/
@@ -179,7 +188,8 @@ human-social-copy/
 | `patterns.md` | 直给句、人群加动作、经验开头、轻CTA | 写正文时对照 |
 | `finance-writing.md` | 金融事件、财报、AI芯片、加密内容写法 | 写美股、宏观、财报、crypto时 |
 | `layout-playbook.md` | 标题、开头、正文骨架、结尾互动、配图 | 写公众号、小红书、长推或图文时 |
-| `voice-system.md` | 语气画像、两阶段提示、平台提示词生成 | 要让AI写得像用户本人时 |
+| `voice-system.md` | 通用语气画像、两阶段提示、平台提示词生成 | 要给其他人建立个人语气时 |
+| `0xmulight-voice-profile.md` | 0xMulight本人语气画像 | 写0xMulight账号内容时默认加载 |
 | `sourcing-playbook.md` | 选题、素材判断、搜索方向、信息整理 | 选题阶段 |
 | `kol-brief-workflow.md` | brief拆解、卖点翻译、风险边界、披露 | 处理合作推广内容时 |
 
