@@ -1,11 +1,11 @@
 ---
 name: human-social-copy
-description: "将AI/工具/crypto/美股/财报内容写成真人风格的中文社交媒体文案。用于写推文、X帖子、中文社交分享和图文脚本。"
-version: 2.11.0
+description: "将AI/工具/crypto/美股/财报内容写成真人风格的中文社交媒体文案，并尽量保留用户本人的语气。用于写推文、X帖子、中文社交分享和图文脚本。"
+version: 2.12.0
 author: 0xMulight
 metadata:
   hermes:
-    tags: [writing, social-media, chinese, tweet, x, humanize, copywriting, finance]
+    tags: [writing, social-media, chinese, tweet, x, humanize, copywriting, finance, voice]
     category: social-media
     triggers:
       - "写推文"
@@ -14,6 +14,8 @@ metadata:
       - "发推"
       - "社交媒体文案"
       - "中文推文"
+      - "我的语气"
+      - "像我写的"
       - "美股"
       - "财报"
       - "tweet"
@@ -22,7 +24,7 @@ metadata:
 
 # Human Social Copy
 
-Use this skill when the user wants Chinese social media copy that feels human, practical, and ready to post. It works for X, Threads, Instagram, TikTok, crypto yap, airdrop analysis, AI tools, GitHub projects, US stocks, earnings, macro notes, market recap, and long-form image copy.
+Use this skill when the user wants Chinese social media copy that feels human, practical, ready to post, and close to the user's own voice. It works for X, Threads, Instagram, TikTok, crypto yap, airdrop analysis, AI tools, GitHub projects, US stocks, earnings, macro notes, market recap, and long-form image copy.
 
 Default language: Simplified Chinese.
 
@@ -46,6 +48,65 @@ Do not create a thread unless the user asks for one.
 - Do not overuse subheadings.
 - Do not write like a tutorial outline unless the user asks for one.
 - Preserve a strong original hook if it is already natural.
+- If user voice conflicts with generic virality, keep the user voice.
+
+## Personal Voice System
+
+Use this section when the user says:
+
+- `写出我的语气`
+- `像我写的`
+- `按我的风格`
+- `不要像AI`
+- The user provides old posts or examples.
+
+Do not simply make the copy more casual. First extract stable patterns from the user's own writing.
+
+Voice priority:
+
+1. Factual accuracy
+2. User voice
+3. Content structure
+4. Platform fit
+5. Virality
+
+Extract these voice signals:
+
+- Common openings
+- Common transitions
+- Common endings
+- Sentence length
+- Paragraph rhythm
+- Risk language
+- Judgment style
+- CTA style
+- Words the user avoids
+- Phrases the user often uses
+
+If no saved voice profile exists, create a temporary voice profile from the current examples before rewriting.
+
+A useful temporary voice profile should include:
+
+```text
+语气定位：
+像一个长期观察市场和内容的人，在给新手做提醒，不装高深，不直接喊单。
+
+表达节奏：
+短句为主，每段1到3行。先抛问题，再拆重点，最后给观察顺序。
+
+常用结构：
+先提醒读者不要被信息流带着跑，再压缩成3到5个重点。每个重点都落到具体信号。
+
+常用句式：
+- 真正值得看的，其实就几件事。
+- 新手最容易看错的地方，是只看表面涨跌。
+- 不要只问A，要看B有没有变。
+- 越热门的方向，越要看估值和预期。
+- 以上不构成投资建议，只做学习记录。
+
+禁止偏移：
+不要写成财经媒体通稿。不要过度夸张。不要写成老师讲课。不要写成销售文案。
+```
 
 ## Direct Sentence Rule
 
@@ -270,6 +331,7 @@ Useful hook types:
 - Audience angle: `如果你经常用AI写中文推文，先把这几类句子删掉。`
 - Risk reminder: `很多项目内容不差，问题出在写法太像公告。`
 - Finance signal: `这周美股别乱看，先看利率预期有没有变。`
+- User voice: keep the user's recurring opening pattern if it is clear from examples.
 
 ## Value Guidance
 
@@ -300,14 +362,15 @@ Examples:
 
 1. Identify the strongest shareable point in the source.
 2. Keep factual information. Do not invent details. If the source has a required URL, include it in the final copy.
-3. Write a first line that can hold attention.
-4. Rewrite the body into practical, concrete information.
-5. If it is financial content, add event, expectation, impact, signal, and risk boundary.
-6. If it is image or long-form copy, add title, opening, body skeleton, and closing interaction.
-7. Remove banned words and banned patterns.
-8. Remove parentheses.
-9. Remove spaces around English words in Chinese text.
-10. End with a soft CTA.
+3. If user examples or a voice profile exist, extract the user's voice first.
+4. Write a first line that can hold attention while staying close to the user's voice.
+5. Rewrite the body into practical, concrete information.
+6. If it is financial content, add event, expectation, impact, signal, and risk boundary.
+7. If it is image or long-form copy, add title, opening, body skeleton, and closing interaction.
+8. Remove banned words and banned patterns.
+9. Remove parentheses.
+10. Remove spaces around English words in Chinese text.
+11. End with a soft CTA.
 
 ## Final Check
 
@@ -326,4 +389,5 @@ Before answering, run every check. Re-read the full output character by characte
 - No AI product review template feel.
 - Financial copy has concrete signals and risk boundary.
 - Image or long-form copy has clear title, opening, body skeleton, and closing interaction.
-- The copy sounds like a real person sharing useful experience, not a balanced review.
+- The copy keeps the user's voice when examples exist.
+- The copy sounds like the user sharing useful experience, not a balanced review or generic viral template.
